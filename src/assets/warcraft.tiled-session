@@ -1,5 +1,5 @@
 {
-    "activeFile": "",
+    "activeFile": "durotar.json",
     "expandedProjectPaths": [
         "."
     ],
@@ -7,14 +7,27 @@
     "fileStates": {
         "": {
             "scaleInDock": 1
+        },
+        "durotar.json": {
+            "scale": 0.8945833333333333,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 479.55286446204013,
+                "y": 319.7019096413601
+            }
+        },
+        "durotar.json#tiles": {
+            "scaleInDock": 1
         }
     },
     "last.imagePath": "C:/Users/kenchobas/Desktop/Game Development/warcraft/src/assets",
     "map.lastUsedFormat": "json",
     "openFiles": [
+        "durotar.json"
     ],
     "project": "warcraft.tiled-project",
     "recentFiles": [
+        "durotar.json"
     ],
     "tileset.embedInMap": true,
     "tileset.spacing": 1

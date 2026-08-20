@@ -11,6 +11,26 @@ export class Player extends Entity {
         this.textureKey = texture;
 
         anims.create({
+            key: 'down-lr',
+            frames: anims.generateFrameNumbers(this.textureKey, {
+                start: 0,
+                end: 2
+            }),
+            frameRate: animsFrameRate,
+            repeat: -1
+        })
+
+        anims.create({
+            key: 'up-lr',
+            frames: anims.generateFrameNumbers(this.textureKey, {
+                start: 36,
+                end: 38
+            }),
+            frameRate: animsFrameRate,
+            repeat: -1,
+        })
+
+        anims.create({
             key: 'down',
             frames: anims.generateFrameNumbers(this.textureKey, {
                 start: 0,
@@ -55,21 +75,31 @@ export class Player extends Entity {
         const keys = this.scene.input.keyboard.createCursorKeys();
 
         if (keys.right.isDown && keys.up.isDown) {
+            this.play('up-lr', true);
             this.setPosition(this.x + delta * 0.10, this.y - delta * 0.10);
         } else if (keys.right.isDown && keys.down.isDown) {
+            this.play('down-lr', true);
             this.setPosition(this.x + delta * 0.10, this.y + delta * 0.10);
         } else if (keys.left.isDown && keys.up.isDown) {
+            this.play('up-lr', true);
             this.setPosition(this.x - delta * 0.10, this.y - delta * 0.10);
         } else if (keys.left.isDown && keys.down.isDown) {
+            this.play('down-lr', true);
             this.setPosition(this.x - delta * 0.10, this.y + delta * 0.10);
         } else if (keys.down.isDown) {
+            this.play('down', true);
             this.setPosition(this.x, this.y + delta * 0.10);
         } else if (keys.left.isDown) {
+            this.play('left', true);
             this.setPosition(this.x - delta * 0.10, this.y);
         } else if (keys.right.isDown) {
+            this.play('right', true);
             this.setPosition(this.x + delta * 0.10, this.y);
         } else if (keys.up.isDown) {
+            this.play('up', true);
             this.setPosition(this.x, this.y - delta * 0.10);
+        } else {
+            this.stop();
         }
     }
 }
