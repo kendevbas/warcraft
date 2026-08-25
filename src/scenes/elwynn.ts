@@ -1,17 +1,17 @@
-import durotarJSON from '../assets/durotar.json';
+import elwynnJSON from '../assets/elwynn.json';
 import { Player } from '../entities/player';
 import { TILES, SIZES, LAYERS, SPRITES } from '../utils/constants';
 
-export class Durotar extends Phaser.Scene {
+export class Elwynn extends Phaser.Scene {
     private player?: Player;
     constructor() {
-        super("DurotarScene");
+        super("ElwynnScene");
     }
 
     //. Метод, в котором происходит предзагрузка
     preload() {
-        this.load.image(TILES.DUROTAR, 'src/assets/durotar.png');
-        this.load.tilemapTiledJSON('map_durotar', 'src/assets/durotar.json');
+        this.load.image(TILES.ELWYNN, 'src/assets/summer_tiles.png');
+        this.load.tilemapTiledJSON('map_elwynn', 'src/assets/elwynn.json');
         this.load.spritesheet(SPRITES.PLAYER, 'src/assets/characters/alliance.png', {
             frameWidth: SIZES.PLAYER.WIDTH,
             frameHeight: SIZES.PLAYER.HIGHT
@@ -20,10 +20,10 @@ export class Durotar extends Phaser.Scene {
 
     //. Создание элементов игры
     create() {
-        const mapDurotar = this.make.tilemap({ key: "map_durotar" });
-        const tileset = mapDurotar.addTilesetImage(durotarJSON.tilesets[0].name, TILES.DUROTAR, SIZES.TILE, SIZES.TILE);
-        const groundLayer = mapDurotar.createLayer(LAYERS.GROUND, tileset, 0, 0);
-        const wallsLayer = mapDurotar.createLayer(LAYERS.WALLS, tileset, 0, 0);
+        const mapElwynn = this.make.tilemap({ key: "map_elwynn" });
+        const tileset = mapElwynn.addTilesetImage(elwynnJSON.tilesets[0].name, TILES.ELWYNN, SIZES.TILE, SIZES.TILE);
+        const groundLayer = mapElwynn.createLayer(LAYERS.GROUND, tileset, 0, 0);
+        const wallsLayer = mapElwynn.createLayer(LAYERS.WALLS, tileset, 0, 0);
 
         this.player = new Player(this, 400, 250, SPRITES.PLAYER)
     }

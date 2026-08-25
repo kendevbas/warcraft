@@ -1,5 +1,5 @@
 {
-    "activeFile": "durotar.json",
+    "activeFile": "elwynn.json",
     "expandedProjectPaths": [
         "."
     ],
@@ -18,16 +18,29 @@
         },
         "durotar.json#tiles": {
             "scaleInDock": 1
+        },
+        "elwynn.json": {
+            "scale": 0.75,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 490.6666666666666,
+                "y": 373.33333333333337
+            }
+        },
+        "elwynn.json#summer_tiles": {
+            "scaleInDock": 1.5
         }
     },
     "last.imagePath": "C:/Users/kenchobas/Desktop/Game Development/warcraft/src/assets",
     "map.lastUsedFormat": "json",
     "openFiles": [
+        "elwynn.json",
         "durotar.json"
     ],
     "project": "warcraft.tiled-project",
     "recentFiles": [
-        "durotar.json"
+        "durotar.json",
+        "elwynn.json"
     ],
     "tileset.embedInMap": true,
     "tileset.spacing": 1
